@@ -24,8 +24,8 @@ const Projects = ({ projects }) => {
                 </div>
 
                 {/* Floating Tech Tags */}
-                <div className="absolute bottom-6 left-6 flex gap-2 translate-y-20 group-hover:translate-y-0 transition-transform duration-500">
-                  {['React', 'NodeJS'].map((tag, i) => (
+                <div className="absolute bottom-6 left-6 flex flex-wrap gap-2 translate-y-20 group-hover:translate-y-0 transition-transform duration-500">
+                  {project.tags && project.tags.map((tag, i) => (
                     <span key={i} className="text-[10px] font-bold text-white bg-indigo-500 px-3 py-1 rounded-full shadow-lg">
                       {tag}
                     </span>

@@ -75,9 +75,16 @@ function App() {
 
   const projects = [
     {
+      name: "Alromaih Car Application",
+      description: "A modern and efficient car-related application built with Flutter, providing users with a high-performance, cross-platform experience for car services and management.",
+      link: "#",
+      tags: ["Flutter", "Dart", "Odoo", "Supabase"]
+    },
+    {
       name: "AI-Based Career Counseling System",
       description: "A personalized guidance system for students to help them choose the right career path using AI trends.",
-      link: "#"
+      link: "#",
+      tags: ["React", "AI", "Node.js"]
     }
   ];
 
