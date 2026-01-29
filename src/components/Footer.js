@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({ personalInfo }) => {
   return (
     <footer className="bg-[#0f172a] text-white pt-24 pb-12 border-t border-white/5">
       <div className="container mx-auto px-4">
@@ -13,13 +13,18 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-4">
-            {['LinkedIn', 'GitHub'].map((social, idx) => (
+            {[
+              { label: 'LinkedIn', href: personalInfo?.linkedin },
+              { label: 'GitHub', href: personalInfo?.github }
+            ].filter(social => social.href).map((social, idx) => (
               <a
                 key={idx}
-                href="#"
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl transition-all font-bold text-sm tracking-widest uppercase hover:border-indigo-500/30"
               >
-                {social}
+                {social.label}
               </a>
             ))}
           </div>

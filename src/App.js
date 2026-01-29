@@ -21,6 +21,7 @@ function App() {
     phone: "+92 3029661825",
     location: "Timergara, Pakistan",
     linkedin: "https://www.linkedin.com/in/nadeem-zia-133178341",
+    github: "https://github.com/Nadeem-1133",
     bio: "Computer Science graduate with strong hands-on experience in Application development and Web development. Expert in building cross-platform mobile apps using React Native and scalable web solutions with React and Node.js.",
     image: profileImg
   };
@@ -112,7 +113,7 @@ function App() {
       <Skills skills={skills} />
       <Projects projects={projects} />
       <Contact personalInfo={personalInfo} />
-      <Footer />
+      <Footer personalInfo={personalInfo} />
     </div>
   );
 }
