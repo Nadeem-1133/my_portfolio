@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 import profileImg from './images/image.png';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('about');
+  const [activeSection, setActiveSection] = useState('home');
 
   const personalInfo = {
     name: "Nadeem Khan",
