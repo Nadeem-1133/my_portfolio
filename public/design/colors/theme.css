@@ -1,0 +1,51 @@
+/*
+ * Single source of truth for the site's theme colors.
+ * Edit RGB channels here (space-separated, e.g. 0 0 0 for black).
+ * Surface backgrounds follow --background-rgb unless explicitly overridden.
+ * npm start / npm run build also sync the browser and install-screen colors.
+ */
+:root {
+  color-scheme: dark;
+
+  /* Page, navigation, sections, cards and form backgrounds. */
+  --background-rgb: 0 0 0; /* #000000 */
+  --surface-rgb: var(--background-rgb);
+  --surface-raised-rgb: var(--background-rgb);
+
+  /* Existing text and brand colors. */
+  --text-rgb: 226 243 227; /* #E2F3E3 */
+  --primary-rgb: 6 141 130; /* #068D82 */
+  --secondary-rgb: 87 200 144; /* #57C890 */
+  --accent-rgb: 37 242 194; /* #25F2C2 */
+  --button-bg-rgb: 5 116 107; /* #05746B */
+  --on-bright-rgb: 11 76 69; /* #0B4C45 */
+  --decoration-rgb: 7 95 88; /* #075F58 */
+  --shadow-rgb: var(--on-bright-rgb);
+  --border-rgb: var(--secondary-rgb);
+  --muted-rgb: var(--text-rgb);
+
+  /* Shared semantic constants for CSS and Tailwind. */
+  --background: rgb(var(--background-rgb));
+  --text: rgb(var(--text-rgb));
+  --primary: rgb(var(--primary-rgb));
+  --secondary: rgb(var(--secondary-rgb));
+  --accent: rgb(var(--accent-rgb));
+  --surface: rgb(var(--surface-rgb));
+  --surface-raised: rgb(var(--surface-raised-rgb));
+  --button-bg: rgb(var(--button-bg-rgb));
+  --button-text: var(--text);
+  --button-hover: rgb(var(--decoration-rgb));
+  --featured-bg: var(--surface);
+  --featured-hover: var(--surface);
+  --on-bright: rgb(var(--on-bright-rgb));
+  --decoration: rgb(var(--decoration-rgb));
+  --border: rgb(var(--border-rgb));
+  --muted: rgb(var(--muted-rgb) / 0.88);
+  --line: rgb(var(--border-rgb) / 0.25);
+  --line-strong: rgb(var(--border-rgb) / 0.48);
+  --panel-tint: rgb(var(--surface-raised-rgb) / 0.55);
+  --mint-soft: rgb(var(--accent-rgb) / 0.16);
+
+  /* Mask opacity, independent of the visible theme colors. */
+  --mask-opaque: #000;
+}
